@@ -278,6 +278,7 @@ class Hotelmgmt:
         
         
 def main():
+    k=0
     print("  ***********************************************   ")
     print("             WELCOME TO THE PARADISE                ")
     print("  ***********************************************   ")
@@ -300,10 +301,15 @@ def main():
             x.maintenance();
         if(ch==4):
             x.checkout();
+            k=1
             break
            
         t=int(input("\nIf you want our services or checkout  press 1 (or 0 if not)"))
-    x.display();  
+    if(k==1):
+        x.display();
+    else:
+        x.checkout();
+        x.display(); 
 if __name__=="__main__":
         main()        
         
